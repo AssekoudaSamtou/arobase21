@@ -1,0 +1,21 @@
+{% load static %}
+
+<nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
+    <div class="container">
+        <a class="navbar-brand logo" href="#"><img src="{% static 'img/logo/logo.svg' %}" width="50" height="50"></a>
+        <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse"
+            id="navcol-1">
+            <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item" role="presentation"><a class="nav-link {% if request.path == accueil_url %}active{% endif %}" href="{% url 'home' %}">Accueil</a></li>
+{#                    <li class="nav-item" role="presentation"><a class="nav-link" href="features.html">Features</a></li>#}
+{#                    <li class="nav-item" role="presentation"><a class="nav-link" href="pricing.html">Pricing</a></li>#}
+{#                    <li class="nav-item" role="presentation"><a class="nav-link" href="about-us.html">About Us</a></li>#}
+                <li class="nav-item" role="presentation"><a class="nav-link {% if request.path == contact_us_url %}active{% endif %}" href="{% url 'contact-us' %}">Nous Contacter</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
