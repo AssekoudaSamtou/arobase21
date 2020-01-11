@@ -43,3 +43,11 @@ or
 For more information about using Python on Heroku, see these Dev Center articles:
 
 - [Python on Heroku](https://devcenter.heroku.com/categories/python)
+
+## Documentation
+
+Setting DISABLE_COLLECTSTATIC
+
+```sh
+$ heroku config:set -a <app_name> DISABLE_COLLECTSTATIC=1
+```
